@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <h3>Got jokes?</h3>
-    <button class="btn btn-primary" @click="initJokes">Add TenRandom  Jokes</button>
+    <button class="btn btn-primary" @click="initJokes">Add Ten Random  Jokes</button>
+    <button class="btn btn-primary" @click="addJoke">Add a Jokes</button>
     <br>
     <br>
     <div class="col md-12">
@@ -11,7 +12,6 @@
         :key="index"
       />
     </div>
-    <div>{{$store.state}}</div>
   </div>
 </template>
 
@@ -21,7 +21,8 @@ import Joke from './Joke';
 
 export default {
   methods: mapActions([
-    'initJokes'
+    'initJokes',
+    'addJoke',
   ]),
   components: {
     Joke,
