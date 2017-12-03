@@ -1,8 +1,16 @@
 <template>
-  <div>{{ items }}</div>
+  <div class="col-md-12">
+    <Item
+      v-for="(item, index) in items"
+      :key="index"
+      :item="item"
+    />
+  </div>
 </template>
 
 <script>
+import Item from './Item';
+
 export default {
   data() {
     return {
@@ -33,6 +41,9 @@ export default {
   },
   created() {
     this.fetchItems();
+  },
+  components: {
+    Item
   }
 }
 </script>
