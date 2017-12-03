@@ -6,3 +6,9 @@
   color: #2c3350;
   margin-top: 60px;
 }
+.joke-card {
+  border: 2px solid #2c3350;
+  border-radius: 2px;
+  padding: 5px;
+  margin: 5px;
+}
