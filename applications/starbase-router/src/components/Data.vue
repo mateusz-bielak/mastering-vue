@@ -4,6 +4,7 @@
       v-for="(item, index) in items"
       :key="index"
       :item="item"
+      :type="type"
     />
   </div>
 </template>
