@@ -7,6 +7,7 @@ Vue.use(Vuex);
 
 const state = {
   user: {},
+  events: [],
 };
 
 export default new Vuex.Store({
