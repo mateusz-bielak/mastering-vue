@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { firebaseApp } from '../firebaseApp';
+import { firebaseApp, eventsRef } from '../firebaseApp';
 import AddEvent from './AddEvent';
 
 export default {
@@ -21,6 +21,14 @@ export default {
   },
   components: {
     AddEvent,
-  }
+  },
+  mounted() {
+    eventsRef.on('value', snap => {
+      const events = [];
+      snap.forEach(event => {
+        events.push(event.val());
+      });
+    });
+  },
 }
 </script>
