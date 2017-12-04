@@ -5,4 +5,12 @@
   text-align: center;
   color: #2c3350;
   margin-top: 60px;
+  padding: 0 10%;
+}
+
+.signout-btn {
+  position: absolute;
+  text-align: right;
+  top: 60px;
+  right: 40px;
 }
